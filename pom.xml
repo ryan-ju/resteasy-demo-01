@@ -250,7 +250,7 @@
             <distributionManagement>
                 <repository>
                     <id>bintray-repo-maven</id>
-                    <url>https://api.bintray.com/maven/ryan-ju/maven-repo/resteasy-demo-01/</url>
+                    <url>https://api.bintray.com/maven/ryan-ju/maven/resteasy-demo-01/</url>
                 </repository>
             </distributionManagement>
             <build>
@@ -283,8 +283,6 @@
                         <artifactId>maven-release-plugin</artifactId>
                         <version>2.5.3</version>
                         <configuration>
-                            <useReleaseProfile>false</useReleaseProfile>
-                            <releaseProfiles>release</releaseProfiles>
                             <autoVersionSubmodules>true</autoVersionSubmodules>
                         </configuration>
                     </plugin>

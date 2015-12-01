@@ -4,7 +4,7 @@
 
     <groupId>org.itechet</groupId>
     <artifactId>resteasy-demo-01</artifactId>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.3</version>
     <packaging>war</packaging>
     <name>${project.groupId}:${project.artifactId}</name>
     <description>Resteasy demo project</description>
@@ -27,7 +27,7 @@
         <connection>scm:git:git@github.com:ryan-ju/resteasy-demo-01.git</connection>
         <developerConnection>scm:git:git@github.com:ryan-ju/resteasy-demo-01.git</developerConnection>
         <url>git@github.com:ryan-ju/resteasy-demo-01.git</url>
-      <tag>HEAD</tag>
+      <tag>resteasy-demo-01-1.0.3</tag>
     </scm>
     <distributionManagement>
         <snapshotRepository>

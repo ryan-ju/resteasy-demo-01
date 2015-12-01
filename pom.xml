@@ -27,7 +27,7 @@
         <connection>scm:git:git@github.com:ryan-ju/resteasy-demo-01.git</connection>
         <developerConnection>scm:git:git@github.com:ryan-ju/resteasy-demo-01.git</developerConnection>
         <url>git@github.com:ryan-ju/resteasy-demo-01.git</url>
-      <tag>HEAD</tag>
+        <tag>HEAD</tag>
     </scm>
     <distributionManagement>
         <snapshotRepository>
@@ -229,6 +229,7 @@
     </build>
 
     <profiles>
+        <!-- Deployment to Tomcat for testing.  Works with both Tomcat 7 and 8. -->
         <profile>
             <properties>
                 <maven.deploy.skip>true</maven.deploy.skip>

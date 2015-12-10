@@ -12,9 +12,19 @@
         <groupId>org.itechet</groupId>
         <version>1.0.7-SNAPSHOT</version>
     </parent>
+    <packaging>war</packaging>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>resteasy-demo-01-server</artifactId>
+
+    <properties>
+        <!-- Tomcat server url -->
+        <tomcat-url>http://localhost:8080/manager/text</tomcat-url>
+        <!-- Maven settings.xml server tag for tomcat user credentials -->
+        <tomcat-server>resteasy-example</tomcat-server>
+        <!-- Context path to the war -->
+        <tomcat-path>/resteasy</tomcat-path>
+    </properties>
 
     <dependencies>
         <!-- Modules -->
@@ -71,5 +81,36 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <profiles>
+        <!-- Deployment to Tomcat for testing.  Works with both Tomcat 7 and 8. -->
+        <profile>
+            <properties>
+                <maven.deploy.skip>true</maven.deploy.skip>
+            </properties>
+            <id>tomcat</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.tomcat.maven</groupId>
+                        <artifactId>tomcat7-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <phase>deploy</phase>
+                                <goals>
+                                    <goal>redeploy-only</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <path>${tomcat-path}</path>
+                            <server>${tomcat-server}</server>
+                            <url>${tomcat-url}</url>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
 </project>

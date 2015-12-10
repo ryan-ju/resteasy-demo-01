@@ -17,11 +17,4 @@
     <artifactId>resteasy-demo-01-model</artifactId>
     <packaging>jar</packaging>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.jboss.resteasy</groupId>
-            <artifactId>jaxrs-api</artifactId>
-        </dependency>
-    </dependencies>
-
 </project>
